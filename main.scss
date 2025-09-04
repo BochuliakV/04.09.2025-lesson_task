@@ -20,6 +20,15 @@ body {
     justify-items: center;
     width: 200px;
     height: 231px;
+
+    &:hover {
+      border-radius: 10px;
+      background-color: #EEEEEE;
+       
+      &__details {
+      display: block;
+      }
+    }
     
     &-photo {
       position: relative;
@@ -61,37 +70,37 @@ body {
         border-radius: 50%;
       }
     }
+
+    &-details {
+      display: block;
+      justify-items: center;
+
+      &-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+        color: #2F4F4F;
+      }
+
+      &-extra {
+        padding-top: 9px;
+        font-family: Arial;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        text-align: center;
+        color: #000000;
+
+      }
+    }
   }
 
-  &__details {
-    display: block;
-    justify-items: center;
-
-    &-name {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 100%;
-      text-align: center;
-      color: #2F4F4F;
-      margin-bottom: 9px;
-      
-
-    }
-
-    &-extra {
-
-    }
-  }
+  
 }
 
 @media (min-width: 751px) {
   .people {
     grid-template-columns: repeat(4, 200px);
-
-    &__details {
-      display: block;
-
-    }    
-    
   }
 }
