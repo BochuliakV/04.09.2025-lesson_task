@@ -20,15 +20,6 @@ body {
     justify-items: center;
     width: 200px;
     height: 231px;
-
-    &:hover {
-      border-radius: 10px;
-      background-color: #EEEEEE;
-       
-      &__details {
-      display: block;
-      }
-    }
     
     &-photo {
       position: relative;
@@ -45,6 +36,8 @@ body {
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
+        transition: 1s;
+
       }
 
       &-rank {
@@ -84,6 +77,8 @@ body {
       }
 
       &-extra {
+        display: none;
+
         padding-top: 9px;
         font-family: Arial;
         font-weight: 400;
@@ -92,6 +87,25 @@ body {
         text-align: center;
         color: #000000;
 
+      }
+    }
+
+    &:hover {
+      border-radius: 10px;
+      background-color: #EEEEEE;
+      scale: 1.2;
+      
+      .people__person-photo {
+        img {
+          transition: 1s;
+          border-radius: 30%;
+        }
+      }
+
+       
+      .people__person-details-extra {
+          display: block;
+        
       }
     }
   }
