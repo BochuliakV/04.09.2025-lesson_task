@@ -20,6 +20,7 @@ body {
     justify-items: center;
     width: 200px;
     height: 231px;
+    padding: 15px;
     
     &-photo {
       position: relative;
@@ -94,6 +95,7 @@ body {
       border-radius: 10px;
       background-color: #EEEEEE;
       scale: 1.2;
+      z-index: 1;
       
       .people__person-photo {
         img {
