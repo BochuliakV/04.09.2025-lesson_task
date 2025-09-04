@@ -1,18 +1,23 @@
 body {
   box-sizing: border-box;
+  font-family: Arial;
+
   
 }
 
 .people {
   display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 200px);
   gap: 40px 30px;
-  padding-top: 30px;
+  padding: 30px 35px 0;
 
 
   &__person {
     
+    display: block;
+    justify-items: center;
     width: 200px;
     height: 231px;
     
@@ -23,6 +28,8 @@ body {
       width: 200px;
       height: 200px;
 
+      padding-bottom: 8px;
+
       img {
         display: block;
         width: 100%;
@@ -31,33 +38,46 @@ body {
         object-fit: cover;
       }
     }
-
-    &__photo-rank {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 20px;
-    height: 20px;
-
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   }
 
-  }
+  &__photo-rank {
+      position: absolute;
+      top: 114px;
+      left: 193px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      width: 32px;
+      height: 32px;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      text-align: center;
+
+
+      background-color: white;
+      color: #8B0000;
+      border-radius: 50%;
+    }
+
+    &__details-name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      text-align: center;
+      color: #2F4F4F;
+
+
+    }
 }
 
 @media (min-width: 751px) {
   .people {
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
     
   }
 }
