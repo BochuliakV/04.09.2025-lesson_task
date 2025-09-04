@@ -16,6 +16,7 @@ body {
   justify-items: center;
   width: 200px;
   height: 231px;
+  padding: 15px;
   display: block;
 }
 
@@ -79,6 +80,7 @@ body {
 }
 
 .people__person:hover {
+  z-index: 1;
   background-color: #eee;
   border-radius: 10px;
   scale: 1.2;
