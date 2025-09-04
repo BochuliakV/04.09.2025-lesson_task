@@ -5,14 +5,16 @@ body {
 
 .people {
   display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px 30px;
+  padding-top: 30px;
+
 
   &__person {
     
     width: 200px;
-    height: 131px;
+    height: 231px;
     
     &-photo {
       position: relative;
@@ -28,29 +30,34 @@ body {
         border-radius: 50%;
         object-fit: cover;
       }
-
-      
     }
 
+    &__photo-rank {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+
   }
 }
 
-@media (min-width: 498px) {
-  .main {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-  }
-}
+@media (min-width: 751px) {
+  .people {
 
-@media (min-width: 748px) {
-  .main {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 40px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .main {
     grid-template-columns: repeat(4, 1fr);
+    
   }
 }
